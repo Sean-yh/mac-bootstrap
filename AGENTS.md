@@ -32,7 +32,9 @@ Use:
 ./install.sh minimal
 ```
 
-`dev` adds more development conveniences and a few GUI tools.
+`minimal` includes Node.js because the preferred agent CLIs are installed through npm.
+
+`dev` adds more development conveniences, document/media processing tools, and a few GUI tools.
 
 Use only when company policy allows:
 
@@ -52,12 +54,14 @@ Core command-line tools:
 - jq
 - fzf
 - bat
+- btop
 - eza
 - zoxide
 - starship
 - git-delta
 - lazygit
 - tmux
+- tldr
 - uv
 - yazi
 
@@ -68,6 +72,14 @@ Development tools:
 - pnpm if needed by active projects
 - uv for Python environments
 - OrbStack only if company policy allows containers and virtualization
+
+Document and media handling tools:
+
+- ffmpeg
+- ImageMagick
+- poppler
+- resvg
+- sevenzip
 
 AI and agent tools:
 
@@ -85,6 +97,19 @@ Terminal habits:
 - yazi file manager helper function
 - git diffs through delta
 - `main` as the default Git branch name
+- no dangerous bypass aliases in shared dotfiles; put any risky local aliases in `~/.zshrc.local` only
+
+## Developer Workflow Profile
+
+The current personal Mac suggests this workflow:
+
+- Codex-led setup and maintenance instead of manual terminal-by-terminal setup.
+- CLI-first development, with GUI tools used only when they materially help.
+- Frequent use of agent tools and local skills, but credentials and plugin state should be recreated on the work Mac rather than copied.
+- Strong need for code search, Git inspection, terminal navigation, and file/document conversion tools.
+- Preference for small local override files over hard-coded machine paths.
+
+This profile is suitable for a company Mac only after stripping personal accounts, remote-control tools, personal cloud apps, Apple-ecosystem automation, and private project paths. The install profiles in this repository should stay conservative.
 
 ## Explicit Exclusions
 
@@ -114,6 +139,7 @@ Do not install or migrate these by default:
 - GitHub CLI `hosts.yml`
 - Browser profiles, cookies, or history
 - Keychain items
+- dangerous bypass aliases such as `codex --dangerously-bypass-approvals-and-sandbox`
 
 If one of these becomes necessary for work, ask before adding it to an install profile.
 
@@ -175,4 +201,3 @@ Useful checks:
 ```bash
 rg -n "auth.json|hosts.yml|/Users/sean|gho_|token|BEGIN OPENSSH|BEGIN RSA|Obsidian|SUMO|Lark|Teams|Zotero|AweSun|RustDesk|UURemote|Surge|Tailscale|Nutstore|BaiduNetdisk|QQ|WeChat|NeteaseMusic|MacTeX|XQuartz" .
 ```
-
