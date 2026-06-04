@@ -1,0 +1,9 @@
+.DS_Store
+.local/
+*.local
+*.secret
+*.key
+auth.json
+hosts.yml
+id_*
+workspaces.local.txt

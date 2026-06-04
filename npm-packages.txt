@@ -1,0 +1,6 @@
+@openai/codex
+oh-my-codex
+@google/gemini-cli
+ccusage
+@ccusage/codex
+agent-browser
