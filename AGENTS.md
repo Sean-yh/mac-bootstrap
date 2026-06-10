@@ -73,6 +73,14 @@ Development tools:
 - uv for Python environments
 - OrbStack only if company policy allows containers and virtualization
 
+Habitual GUI tools:
+
+- Google Chrome
+- Ghostty
+- Doubao Input Method, installed from the official page: https://shurufa.doubao.com/pc
+
+Do not use the Homebrew `doubao` cask for the input method. That cask installs the Doubao AI chat assistant app, not the input method.
+
 Document and media handling tools:
 
 - ffmpeg
@@ -110,6 +118,8 @@ The current personal Mac suggests this workflow:
 - Preference for small local override files over hard-coded machine paths.
 
 This profile is suitable for a company Mac only after stripping personal accounts, remote-control tools, personal cloud apps, Apple-ecosystem automation, and private project paths. The install profiles in this repository should stay conservative.
+
+Input methods are security-sensitive because they can observe typed text. Install Doubao Input Method only from the official site and only if company policy allows third-party input methods. Do not sync personal dictionaries or personal accounts onto the work Mac unless explicitly approved.
 
 ## Explicit Exclusions
 
